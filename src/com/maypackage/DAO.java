@@ -19,11 +19,19 @@ public class DAO {
 	}
 	
 	public static void deletePost(int id) {
+		Post temp = null;
 		for (Post p : posts) {
 			if (p.getId() == id) {
-				posts.remove(p);
+				temp = p;
 			}
 		}
+		if (temp != null) {
+			posts.remove(temp);
+		}
+	}
+
+	public static void addPost(String txt) {
+		posts.add(new Post(posts.size()+1, txt));
 	}
 	
 	

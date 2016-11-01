@@ -10,16 +10,16 @@ import javax.servlet.http.HttpServletResponse;
 import com.maypackage.DAO;
 
 /**
- * Servlet implementation class FirstServlet
+ * Servlet implementation class DeletePost
  */
-@WebServlet("/Posts")
-public class FirstServlet extends HttpServlet {
+@WebServlet("/delete")
+public class DeletePost extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public FirstServlet() {
+    public DeletePost() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -28,9 +28,12 @@ public class FirstServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		System.out.println("Servlet Post is running");
-		request.setAttribute("posts", DAO.getPosts());
-		request.getRequestDispatcher("/Posts.jsp").forward(request, response);
+		System.out.println("Servlet Delete is running");
+		int id = Integer.parseInt(request.getParameter("id"));
+		DAO.deletePost(id);
+		response.sendRedirect("Posts"); //redirect to servlet
 	}
 
+
 }
+ 

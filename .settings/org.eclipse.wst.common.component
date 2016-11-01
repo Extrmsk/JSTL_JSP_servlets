@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
-    <wb-module deploy-name="JSTL_JSP_servlets_test">
+    <wb-module deploy-name="WEB_post">
         <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
-        <property name="java-output-path" value="/JSTL_JSP_servlets_test/build/classes"/>
-        <property name="context-root" value="JSTL_JSP_servlets_test"/>
+        <property name="java-output-path" value="/WEB_post/build/classes"/>
+        <property name="context-root" value="WEB_post"/>
     </wb-module>
 </project-modules>
